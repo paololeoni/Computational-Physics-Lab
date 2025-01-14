@@ -1,0 +1,30 @@
+
+to develop a causal inference pipeline capable of discriminating between the two following models:    ALPHA:                                                                                                                                                                                                      X = epsilon_x, Y = f_y(X) + eta_y, Z = f_z(X) + eta_z, W = f_w(Z) + eta_w                                                                      BETA:                                                                                                                                                                                                   X = epsilon_x, Y = f_y(X) + eta_y, Z = f_z(X) + eta_z, W = f_w(Z,Y) + eta_w                                                                      where epsilon is some random distribution with mean <X> and variance sigma^2(x). eta_z,y,w are are gaussian noises with zero avarage and variace sigma^2(z),sigma^2(y),sigma^2(w) .  f_y(X),  f_z(X), f_w(Z),  f_w(Z,Y) are some unspecified functions of your choice. [Hint: the functions can be taken as simple as their linear expansion, i.e . f_y(X) = <Y> + m_{XY}(X-<X>)].                                                            1) Simulate two large (#points ≥ 105 each) datasets, one generated with the α−model and one
+generated with the β−model. Compare how all variables are correlated (or not) with each other
+in both datasets (for example, one can construct a table listing all the possible pairs of variables
+and whether the variables are correlated or not in the two datasets). Comment on the possibility,
+given some unknown new data, to select between thes.
+
+
+ Matematicamente, nel caso di rumore additivo di dimensione, ciò corrisponde all'equazione Ld = f(Lb) + η, dove η è il rumore nella dimensione di divisione, indipendente da Lb. Questo è un esempio di modello causale strutturale (SCM), ampiamente utilizzato nell'inferenza causale.
+Ogni nodo rappresenta una variabile, che può corrispondere a una quantità osservabile ottenuta negli esperimenti o a una variabile non osservata. Nei grafi studiati, i nodi corrisponderanno alle lunghezze cellulari agli eventi del ciclo cellulare, con l'assenza di un arco tra due nodi che indica che non vi è un effetto causale diretto tra le due variabili. 
+
+\begin{equation}
+  \text{$\alpha$ :}
+  \begin{cases}
+    L_{ip} = \eta_{ip} \\
+    L_b = L_{ip}\exp(\lambda(C+D)) +\eta_b \\
+    L_i = \frac{L_{ip}+\Delta_{ii}}{2} + \eta_i\\
+    L_d = 2L_i\exp(\lambda(C+D)) + \eta_d
+  \end{cases}
+\end{equation}
+
+\begin{equation}
+  \text{$\beta$ :}
+  \begin{cases}
+    L_{ip} = \eta_{ip} \\
+    L_b = L_{ip}\exp(\lambda(C+D)) +\eta_b \\
+    L_i = \frac{L_{ip}+\Delta_{ii}}{2} + \eta_i\\
+    L_d = \max(L_b + \Delta_{bd} + \eta_{bd}, L_i\exp(\lambda(C+D) + \eta_{C+D}))
+  \end{cases}  
+\end{equation}

@@ -1,0 +1,21 @@
+Media dati vulcanici (dal 850 ad oggi) :-0.06518185662514288
+Media Estati (dal 500 ad oggi) :-0.08929413333333332
+Media Paleo (da 783k anni fa ad oggi) :0.00047741935483871557
+
+Dataset Vulcani:
+Step 10: Discrepanza massima = 0.768899157
+Step 30: Discrepanza massima = 0.7413691956666666
+Step 50: Discrepanza massima = 0.6900195176399999
+Step 100: Discrepanza massima = 0.3551620026041177
+
+Dataset estivo:
+Step 10: Discrepanza massima = 1.90783
+Step 30: Discrepanza massima = 1.0890727272727272
+Step 50: Discrepanza massima = 1.531578
+Step 100: Discrepanza massima = 1.519355
+
+Dataset paleo:
+Step 10: Discrepanza massima = 8.186
+Step 30: Discrepanza massima = 6.464666666666666
+Step 50: Discrepanza massima = 3.007
+Step 100: Discrepanza massima = 1.5314999999999999

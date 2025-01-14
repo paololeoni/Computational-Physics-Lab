@@ -1,0 +1,182 @@
+
+Reminder. reddit secret : pkzkO6jHJk0_2PAb00T29w, paolo leoni, polleoni5
+
+I “data challenge” (36h) partono da un dataset e loro devono raggiungere un certo numero di obiettivi.
+
+Al termine di ogni data challenge gli studenti devono consegnare un report scritto in LaTeX che descrive i risultati conseguiti e include i plot. Ogni report deve essere *MAX DI TRE PAGINE* secondo le linee guida già diffuse. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Data Challenge 1 (guidato). Razionalizzazione dei dati climatici. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	  ## Lancio: Martedì 19 Marzo 2024 live ##
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	  ## Deadline: Martedì 9 Aprile 2024    ##
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+_________________________
+
+Comandamenti
+
+1. Data Science è DOREMI:
+Dati -> Ottieni i dati -> Ripulisci i dati -> Esplora i dati -> Modellizza i dati -> Interpreta i dati 
+
+2. Tenere conto dei limiti (e bias) dei dati. 
+
+3. Preferire modelli con meno parametri. 
+
+4. Essere severi con se stessi/e. 
+
+5. Mettere in discussione ogni interpretazione. 
+
+6. In applicazioni interdisciplinari della fisica ci sono problemi culturali: bisogna acquisire conoscenze specifiche del dominio e possibilmente collaborare con esperti del campo
+
+(I punti 4-5 possono essere riassunti nel criterio che il target primario del nostro bullshit calling dobbiamo essere noi stessi/e)
+_________________________
+
+
+Indicazioni specifiche importanti. 
+
+Affrontare le domande *con modestia*. Il nostro background di fisica fornisce competenze di modellizzazione e analisi dati, e in generale di uso pratico della matematica, ma non abbiamo conoscenze specifiche di scienza del clima. In primis bisogna prendere coscienza che non si è esperti/e e cercare di capire cose semplici. 
+
+Neanche i docenti sono esperti, ma sono esperti di bullshit calling, e metteranno in pratica la loro esperienza coi report. 
+
+Scegliere questioni __circoscritte__ l’obiettivo è lavoro fattibile in 2-3 settimane e un report di tre pagine, non si possono affrontare tutte le domande allo stesso tempo. Formulare la domanda nel modo più chiaro possibile. Definire il data set appropriato alla domanda. 
+
+Un risultato importante può essere negativo. Per esempio: “i dati non permettono di concludere XXX, o di propendere per l’ipotesi AAA rispetto a BBB, e lo dimostro utilizzando l’analisi YYY, il plot KKK, il modello ZZZ”. 
+
+_________________________
+
+Struttura di Supervisione
+
+DC1 è un progetto aperto ma supervisionato. I main supervisor di DC1 sono Marco Cosentino Lagomarsino e Gabriele Micali. 
+
+Simone Pompei, Valentina Guarino e Stefano Sorti sono tutor addizionali. I/le docenti saranno presenti ai Q&A e possono essere contattati su Slack.    
+
+
+_________________________
+
+
+## OTTENERE I DATI
+
+Il campo è dominato da “climate models” che sono simulatori dettagliati di processi geofisici trattati come "esperimenti", e da cui si inferiscono predizioni. Questi modelli sono costosi dal punto di vista computazionale, contengono un numero molto alto di parametri e nonostante possano descrivere molti dettagli contengono assunzioni. Il nostro approccio vuole essere complementare e mirato a far emergere cosa si riesce a comprendere in modo semplice a partire dai dati. 
+
+
+NB: *DEFINIRE* UN DATASET INTEGRATO PER IL PROPRIO STUDIO, ORDINARLO E *RIPULIRLO* DA PROBLEMI SPECIFICI E’ MOLTO IMPORTANTE. 
+
+*CHI GENERA DATA SET COMBINATI INTERESSANTI PUO’ CONDIVIDERLI E MENZIONARLO NEL REPORT* 
+
+La situazione su dati climatici non è frammentata e ci sono molte sorgenti chiare e usate come riferimento. Molti dati provengono da articoli scientifici (dati come materiale supplementare). D'altra parte, i dati hanno limiti e problemi di risoluzione. 
+
+Per alcuni tipi di dati più esotici bisogna compilare un proprio database. 
+
+E’ possibile pensare in modo creativo a dati. Per esempio
+https://www.washingtonpost.com/weather/2021/03/29/japan-kyoto-cherry-blossoms-record/
+https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0138996
+
+
+%%%%%%%%%%%%%%%%%%%%%% 
+
+## ALCUNI PUNTI DI PARTENZA PER DATI
+
+Alcune pagine di Wikipedia potrebbero essere istruttive per raccogliere informazioni base e trovare sorgenti di dati. In particolare si possono trovare alcuni dati plottati, e poi dalle fonti risalire al dataset originale. 
+
+IPCC
+https://www.ipcc.ch/
+Altro punto di inizio per orientarsi in dati già analizzati e risalire ai sorgenti. 
+https://www.ipcc-data.org/data_catalogue.html
+
+Our World in data 
+Contiene varie analisi e fornisce i dati correlati, dando anche le fonti.
+https://ourworldindata.org/explorers/climate-change
+https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions
+
+
+NASA
+https://climate.nasa.gov/nasa_science/data/
+
+NCEI Paleoclimatology
+https://www.ncei.noaa.gov/products/paleoclimatology/ice-core
+
+Paleobiology DataBase
+https://paleobiodb.org/classic
+Per esempio qui è possibile ottenere dati paleobiologici di biodiversità nel tempo. 
+
+PAGES project. Provides support for the gathering and synthesis of climate data
+https://pastglobalchanges.org/science/data/databases
+compiled list of databases , which should serve as a useful starting point:
+https://pastglobalchanges.org/science/data/ext-databases
+
+Libro Back-of-the-Envelope ("BOE"): Questo libro usa tecniche molto semplici e parte da plot disegnati basati su dati già analizzati, ma può fornire spunti e sorgenti di dati per progetti.  
+https://mcltone.github.io/boe/
+
+_________________________
+
+## A. Primo punto (comune a tutti). 
+La temperatura sta aumentando? 
+Cosa possiamo imparare guardando indietro nel tempo a varie scale? 
+
+A1. Ottenere dei dati di serie temporali per temperatura globale a diverse scale temporali. 
+Dati diretti esistono da circa 150 anni e ad alta risoluzione da 50. 
+Dati precisi da carotaggio sono disponibili su scale che vanno da pochi anni fa a oltre 800000 anni fa. Altre serie temporali geologiche sono disponibili su scale temporali di milioni di anni e oltre.   
+
+Cosa insegnano i dati su una scala di 2000 anni? 
+Cosa si apprende guardando una scala di centinaia di migliaia di anni? 
+E di milioni / decine di milioni di anni? 
+
+*Caveat importanti*:
+Scegliere prima di partire un dataset da utilizzare e ripulirlo. E’ lecito e utile condividere dati aggregati e ripuliti / formare repository su GitHub a cui contribuiscono e accedono tutti/e. 
+
+Dichiarare chiaramente nel report che dati si sono utilizzati e con che criteri si sono scelti. 
+
+Scegliere metodi semplici. Questo problema è un classico nell’analisi di serie temporali ed esistono metodologie arbitrariamente complesse. Qui miriamo a rispondere alle domande più semplici con osservabili semplici e trasparenti. 
+
+_________________________
+
+## B. Secondo punto: individuare e affrontare una domanda ben definita nell’ambito di un tema a scelta tra quelli proposti sotto. 
+
+
+B1. CO2 - e altri gas serra - in atmosfera: stanno aumentando? Legami temperatura/ gas serra: come variano le correlazioni su scale temporali diverse?
+
+Progetto analogo ad A1 ma con serie temporali di CO2 o di altri gas serra 
+(per esempio Metano, N2O). 
+
+Bonus track: Come si potrebbe nelle analisi precedenti andare oltre il concetto di correlazione e cercare indizi di causalità o perlomeno di gerarchia temporale tra eventi?
+
+B2. Omeostasi di temperatura 
+
+Caratterizzare le fluttuazioni di queste serie temporali e chiedersi se su certe scale temporali e entro certi valori delle forzanti sia possibile mostrare che c’è una tendenza alla ”omeostasi” cioè a ristabilire il valore medio data una fluttuazione. 
+
+Suggerimenti. Ci sono periodi (per esempio tra 1000 e 2000 anni fa) in cui la temperatura è stazionaria,  cioè fluttua attorno a un valore costante nel tempo. Oppure bisogna rimuovere i trend su scale temporali più lunghe. 
+
+B3. Analisi del Legame tra Sostenibilità della Popolazione e Emissioni di Gas Serra Utilizzando l'Equazione di Kaya e Stime di Fermi
+
+Lo scopo di questa analisi è esplorare e quantificare il legame tra la sostenibilità della popolazione e le emissioni di gas serra. L'equazione di Kaya è una classica stima di Fermi usata per disaggregare le emissioni di CO2 e correlarle con vari fattori demografici, economici ed energetici. L'equazione di Kaya decompone le emissioni totali di CO2 in quattro fattori principali: popolazione (P), PIL pro capite (GDP/P), intensità energetica (E/GDP), e intensità delle emissioni di carbonio dell'energia (CO2/E). Analizzando  come ciascuno di questi fattori contribuisca alle emissioni totali, la stima mira a identificare le leve più efficaci per la riduzione delle emissioni.
+
+Pensare a decomposizioni alternative / ulteriori. Per esempio l'equazione di Kaya non tiene conto esplicitamente delle emissioni dovute ad agricoltura, allevamento, e trasporti. Proporre una stima personale per approfondire alcuni aspetti.
+
+Procurarsi dati sui vari fattori delle stime alla Kaya per vari paesi mondiali. Questi fattori non sono necessariamente indipendenti. Valutarne le correlazioni e il loro impatto sulle conclusioni del modello. 
+
+Cercare di arrivare a una interpretazione che discute le implicazioni dell'analisi per la sostenibilità della popolazione considerando i vari paesi, e le strategie possibili di riduzione delle emissioni.
+
+
+B4. Forzanti e temperatura. Si dice che i vulcani siano una forzante importante per il clima terrestre, considerando anche eventi in cui eruzioni massive si legano a estinzioni di massa. Lo stesso vale per il sole, la cui attività non è costante. 
+
+Definire un data set che contenga eventi di vulcanismo importanti in un dato intervallo temporale, e valutare quale entità di eventi di vulcanismo impatta il clima globale, come lo fa, e su che scale temporali.
+
+E' possibile fare un lavoro simile con l'attività solare? 
+
+
+B5. Media, Comunicazione e Sensibilizzazione. 
+
+Siamo sensibilizzati in modo esagerato o lo siamo troppo poco? Lo siamo nel modo giusto? 
+
+Come correlano gli eventi reali con la presenza nei media? (per esempio si può generare dataset facendo parsing di parole chiave da archivi di news on line, google trends o simili)
+
+
+%%%%
+
+
